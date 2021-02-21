@@ -27,12 +27,21 @@ class BubbleSortTest {
         assertThat(sort).contains(15);
     }
     @Test
+    void shouldReturnEmptyArray() {
+        // given
+        int[] numbers = {};
+        // when
+        int[] sort = bubbleSort.sort(numbers);
+        // then
+        assertThat(sort).isEmpty();
+    }
+    @Test
     void shouldNotReturnNull() {
         // given
         int[] numbers = {};
         // when
         int[] sort = bubbleSort.sort(numbers);
         // then
-        assertThat(sort).contains();
+        assertThat(sort).isNotNull();
     }
 }

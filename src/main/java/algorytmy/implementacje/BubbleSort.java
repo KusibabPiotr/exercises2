@@ -4,6 +4,8 @@ public class BubbleSort {
 
     public int[] sort(int[] tab){
 
+        if (tab == null) return new int[20];
+
         int bigger = -1;
 
         for (int i = 0; i < tab.length; i++) {
